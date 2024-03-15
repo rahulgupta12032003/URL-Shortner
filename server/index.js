@@ -20,6 +20,15 @@ app.get("/", (req, res) => {
     res.json({message:"Hello Hash URL"})
 })
 
+app.get("/test", async (req, res) => {
+  try {
+    const url = await Url.find({});
+    res.json(url);
+  } catch (error) {
+    res.status(400).json({ message: `Get Error ${error}` });
+  }
+})
+
 app.use('/api/urls', urlRoutes);
 
 app.listen(PORT,() =>{
