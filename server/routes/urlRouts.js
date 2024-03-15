@@ -32,7 +32,7 @@ router.get('/:hashedUrl', async (req, res) => {
 });
 
 // Get all url stored in database
-router.get("/all-urls", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const url = await Url.find({});
     res.json(url);
