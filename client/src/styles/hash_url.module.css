@@ -34,6 +34,7 @@
 }
 
 .Hash_Url_Button {
+    text-wrap: nowrap;
     position: relative;
     background-color: #04AA6D;
     border: none;
