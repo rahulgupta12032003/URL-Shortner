@@ -1,0 +1,168 @@
+.maincontainer {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.maincontainer>div {
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid rgb(153, 150, 150); */
+    padding: 10px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.maincontainer>div>h1 {
+    color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.maincontainer>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Hash_Url_Button {
+    position: relative;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    /* width: 100%; */
+}
+.Hash_Url_Button_Disable {
+    position: relative;
+    background-color: #e0e6e3;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    /* width: 100%; */
+}
+.Hash_Url_Button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.Hash_Url_Button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.url_input {
+    padding: 12px;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.text {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.copyButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.copyButton:hover {
+    background-color: #0056b3;
+}
+
+.copy_icon {
+    font-size: 1rem;
+}
+
+@media screen and (max-width : 768px) {
+    .maincontainer>div {
+        width: 75%;
+    }
+
+    .url_input {
+        width: 100%;
+    }
+
+    .maincontainer>div>h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width : 568px) {
+    .maincontainer>div {
+        width: 75%;
+    }
+
+    .url_input {
+        width: 80%;
+    }
+}
